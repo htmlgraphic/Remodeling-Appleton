@@ -1,0 +1,37 @@
+# Mac OS X files
+*.DS_Store
+._*
+
+#NetBeans files
+nbproject/
+
+# Vim
+*.swp
+
+# Extras
+*.log
+_notes
+www/wp-content/debug.log
+
+#twitter cache files
+www/wp-content/themes/insight/cache
+
+# Sitemaps
+sitemap-blog.xml
+sitemap-blog.xml.gz
+
+# Video interviews and digtial magazines
+www/video
+www/UploadData
+www/digital
+www/epapers
+www/ads
+
+# Exclude plugins - goofy permissions / issues 
+www/wp-content/plugins/*
+
+# timthumb cache 
+www/wp-content/themes/mimbo/scripts/cache/*
+
+# WordPress Upload Directory
+www/wp-content/uploads
