@@ -15,7 +15,7 @@
     });
   </script>
 
-  <div id="about-us-navigation-menu">
+  <div id="about-us-navigation-menu" style="float:left;">
     <ul>
       <li><a href="#history" rel="history">History</a></li>
       <li><a href="#awards" rel="awards">Awards</a></li>
@@ -43,7 +43,7 @@
     <?php
     $page_data = get_page($about_page_id);
     ?>
-    <div id="about-subpage-<?php echo $about_page_name; ?>" class="about-subpage" style="display:none;">
+    <div id="about-subpage-<?php echo $about_page_name; ?>" class="about-subpage" style="display:none;float:left;">
       <?php
       $content = apply_filters('the_content', $page_data->post_content);
       $title = $page_data->post_title;
