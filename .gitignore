@@ -13,12 +13,12 @@ nbproject/
 _notes
 www/wp-content/debug.log
 
-#twitter cache files
+# Twitter cache files
 www/wp-content/themes/insight/cache
 
 # Sitemaps
-sitemap-blog.xml
-sitemap-blog.xml.gz
+www/sitemap.xml
+www/sitemap.xml.gz
 
 # Video interviews and digtial magazines
 www/video
