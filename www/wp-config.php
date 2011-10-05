@@ -71,6 +71,36 @@ $table_prefix  = 'wp_';
  */
 define('WPLANG', '');
 
+// Determine whether we're working on a local server
+// or on the real server:
+if (get_cfg_var('IS_LIVE') == 1) {
+  define('IS_LIVE', true);
+} else {
+  define('IS_LIVE', false);
+}
+// Determine location of files and the URL of the site:
+// Allow for development on different servers.
+
+@ini_set('display_errors',0);
+if(!IS_LIVE){
+  define('WP_DEBUG',         true);  // Turn debugging ON
+  define('WP_DEBUG_DISPLAY', false); // Turn forced display OFF
+  define('WP_DEBUG_LOG',     true);  // Turn logging to wp-content/debug.log ON
+}
+
+// This will create a debug.log file in the wp-content folder
+if(!function_exists('_log')){
+  function _log( $message ) {
+	if( WP_DEBUG === true ){
+	  if( is_array( $message ) || is_object( $message ) ){
+		error_log( print_r( $message, true ) );
+	  } else {
+		error_log( $message );
+	  }
+	}
+  }
+}
+
 /**
  * For developers: WordPress debugging mode.
  *
@@ -88,4 +118,10 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
-?>
+
+
+/** Override default file permissions */
+if(is_admin()) {
+add_filter('filesystem_method', create_function('$a', 'return "direct";' ));
+define( 'FS_CHMOD_DIR', 0751 );
+}
