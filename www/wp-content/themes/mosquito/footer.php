@@ -8,7 +8,7 @@
             </ul>
             
             <div>
-            <img src="http://www.placehold.it/330x190" />
+            <img src="/images/footer_woodage.png" />
             </div>
             
 		</footer>

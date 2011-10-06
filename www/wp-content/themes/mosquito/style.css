@@ -11,11 +11,11 @@ Version:        0.1.0
 @import url("../H5/style.css");
 
 html { font-size: 100%; height: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-body { background:#666; height: 100%; line-height: 1.231; margin: 0 auto; width: 950px; }
+body { height: 100%; line-height: 1.231; margin: 0 auto; width: 948px; }
 body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
 body > header{ padding:10px 25px 10px; margin-top:15px;}
-	body > header div.phone {float:right; padding:20px 25px 25px;}
+	body > header div.phone {font:normal 400 .9em futura-pt; float:right; padding:20px 25px 25px;}
 	body > header img{border:none;}
 	body > header a, body > header div a:link, body > header div a:visited{ color:#FFF; font-size:1.4em; font-family:Arial, Helvetica, sans-serif; text-decoration: none;}
 body > nav{ float:left; padding:0; margin-bottom:35px; width: 100%;}
@@ -33,16 +33,49 @@ body > nav{ float:left; padding:0; margin-bottom:35px; width: 100%;}
 	body > nav ul li a:hover{ background:#10ACE9; text-shadow: 0.1em 1px #666;}
 nav + section { background:#FFF; margin: 0; width: 100%;}
 
-section > div{ float:left; padding:0 10px; width:295px;}
-	section > div p{ padding:0 10px;}
-	section > .about-subpage{width:500px;}
+
+	
+	section > .about-subpage{ width:500px;}
+
+/* HOME */
+
+.home section > div{ float:left; padding:0 10px 0 11px; width:295px;}
+	.home section > div img{ border:0;}
+	.home section > div p{font:normal 400 1em futura-pt; height:165px; line-height:130%; margin:0 0 15px 0; padding:0 5px;}
+	.home section > div ul{ margin:0 5px 10px 5px; padding:0;}
+	.home section > div ul li{font:normal 400 1em futura-pt; list-style:none; margin:0; padding:5px 0;}
+	.home section > div ul li:first-child{border-bottom: #666 dotted;}
+		.home section > div ul li a{ color:#000; text-decoration:none;}
+		.home section > div ul li a:hover{ text-decoration:underline;}
+
+div.image {
+   position: relative;
+   width: 100%; /* for IE 6 */
+}
+
+h3 {
+   position: absolute;
+   top: 170px;
+   left: 0;
+   width: 100%;
+}
+h3 div {
+   color: #333;
+   font: italic 24px/42px omnes-pro, Helvetica, Sans-Serif;
+   letter-spacing: -1px;
+   background: rgb(255, 255, 255); /* fallback color */
+   background: rgba(255, 255, 255, 0.7);
+   padding: 5px 0 5px 10px;
+   text-transform:uppercase;
+   width:240px;
+}
 
 #about-us-navigation-menu{width:200px;}
 
 body > footer{ margin:0; padding:20px 0 0 0; font-family: Helvetica, sans-serif;}
-footer > ul{ float:left; margin:0; width:475px;}
-	footer > ul li{color:#FFF; font-size:.8em; list-style:none; padding:10px 0; text-align:left; text-shadow: 0.1em 0.1em #333}
-	footer > ul li a, footer > ul li a:link, footer > ul li a:visited{ color:#FFF; padding:0 5px; text-decoration:none;}
+footer > ul{ float:left; font:normal 400 1.2em futura-pt; margin: 0 0 0 10px; padding: 0; width:475px;}
+	footer > ul li{color:#FFF; font-size:.8em; list-style:none; padding:10px 0; text-align:left; }
+	footer > ul li a, footer > ul li a:link, footer > ul li a:visited{ color:#FFF; padding:0 5px; text-decoration:none; text-shadow: 1px 1px #333}
 		footer > ul li a:hover{ text-decoration:underline;}
 	footer > ul li strong{font-style:normal; font-weight:bold; text-transform:uppercase;}
 		footer > ul li:last-child{ font-size:.7em;}

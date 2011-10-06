@@ -9,16 +9,21 @@
 
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen">
 		<link rel="alternate" type="text/xml" title="<?php bloginfo('name'); ?> RSS 0.92 Feed" href="<?php bloginfo('rss_url'); ?>">
+<?php /*?>		
 		<link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>">
 		<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS 2.0 Feed" href="<?php bloginfo('rss2_url'); ?>">
+<?php */?>
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+        
+        <script type="text/javascript" src="http://use.typekit.com/iby7rdb.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 		<?php wp_enqueue_script('jquery'); ?>
 		<?php wp_head(); ?>
 
 		<script src="<?php bloginfo('template_directory'); ?>/javascript/h5.js"></script>
         
-        <?php if (get_page($page_id)->ID == 14): // Digital / Paper Subscription ?>
+        <?php if (get_page($page_id)->ID == 14): // About Us Page ?>
 		<script>
           $(function() {
             $('#about-us-navigation-menu ul li a').click(function(event) {
@@ -29,6 +34,12 @@
           });
         </script>
         <?php endif; ?>
+
+		<style type="text/css">
+        <?php if (is_home()): // About Us Page ?>
+           html{ background:#0F0B08 url(/images/bg/home.jpg) top center no-repeat;}
+        <?php endif; ?>
+        </style>
         
 	</head>
 	<body <?php body_class(); ?>>
