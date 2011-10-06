@@ -9,3 +9,22 @@ Version:        0.1.0
 */
 
 @import url("../H5/style.css");
+
+
+body{ background:#666; margin: 0 auto; width: 950px;}
+nav + section { background:#FFF; margin: 0; width: 100%;}
+
+section > div{ float:left; padding:0 10px; width:295px;}
+	section > div p{ padding:0 10px;}
+	section > .about-subpage{width:500px;}
+
+#about-us-navigation-menu{width:200px;}
+
+body > footer{ margin:0; padding:20px 0 0 0; font-family: Helvetica, sans-serif;}
+footer > ul{ float:left; margin:0; width:475px;}
+	footer > ul li{color:#FFF; font-size:.8em; list-style:none; padding:10px 0; text-align:left; text-shadow: 0.1em 0.1em #333}
+	footer > ul li a, footer > ul li a:link, footer > ul li a:visited{ color:#FFF; padding:0 5px; text-decoration:none;}
+		footer > ul li a:hover{ text-decoration:underline;}
+	footer > ul li strong{font-style:normal; font-weight:bold; text-transform:uppercase;}
+		footer > ul li:last-child{ font-size:.7em;}
+footer > div{ float:right;}
