@@ -1,0 +1,10 @@
+/* TEAM */
+	UI Developer: Jason Gegere
+	Contact: http://www.htmlgraphic.com
+	Twitter: @gegere
+	From: Green Bay, Wisconsin, USA
+
+/* SITE */
+	Language: English
+	Doctype: HTML5
+	IDE: Coda, NetBeans Photoshop, Fireworks
