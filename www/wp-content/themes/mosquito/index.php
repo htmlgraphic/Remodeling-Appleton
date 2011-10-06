@@ -1,83 +1,28 @@
 <?php get_header(); ?>
 
 		<section>
-
-			<?php if (have_posts()) : ?>
-			<?php while (have_posts()) : the_post(); ?>
-
 			<article id="post-<?php the_ID(); ?>">
-				<header>
-					<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-					<p>Posted on <?php the_time('F jS, Y'); ?> by <?php the_author(); ?></p>
-				</header>
 				<section>
-					<?php the_content('Read more on "'.the_title('', '', false).'" &raquo;'); ?>
+                	
+                    <div><a href="/interior"><img src="http://www.placehold.it/295x270" /></a>
+                  <h3>Interior Design</h3>
+                  <p>Whether you are interested in a kitchen make over are considering a major residential renovation, our design team can help your new space reflect your individual need, taste, interest, and budget.</p></div>
+                    <div><a href="/renovations"><img src="http://www.placehold.it/295x270" /></a>
+                  <h3>Renovations</h3>
+                  <p>Our award winning renovation team can help you remaster any project from kitchens, baths, basements, home additions or even a new outdoor living area. From conception to finish we will be there with you.</p></div>
+	                <div><a href="/outdoor-living"><img src="http://www.placehold.it/295x270" /></a>
+                  <h3>Green Remodeling</h3>
+                  <p>Home performance solutions and environmentally friendly interior and exterior projects designed to help you reduce energy costs and improve indoor air quality. Learn what using the right products and processes can do for you from a Green Certified Professional and Green Remodeling Educator of the National Association of the Remodeling Industry.</p></div>
+                
+					<?php //the_content('Read more on "'.the_title('', '', false).'" &raquo;'); ?>
 
 				</section>
 				<footer>
-					<p><?php the_tags('Tags: ', ', ', '<br>'); ?> Posted in <?php the_category(', '); ?> &bull; <?php edit_post_link('Edit', '', ' &bull; '); ?> <?php comments_popup_link('Respond to this post &raquo;', '1 Response &raquo;', '% Responses &raquo;'); ?></p>
+					<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 				</footer>
 			</article>
-
-			<?php endwhile; ?>
-
-			<nav>
-				<p><?php posts_nav_link('&nbsp;&bull;&nbsp;'); ?></p>
-			</nav>
-
-			<?php else : ?>
-
-			<article>
-				<h1>Not Found</h1>
-				<p>Sorry, but the requested resource was not found on this site.</p>
-				<?php get_search_form(); ?>
-			</article>
-
-			<?php endif; ?>
-
 		</section>
 
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?><?php get_header(); ?>
-
-		<section>
-
-			<?php if (have_posts()) : ?>
-			<?php while (have_posts()) : the_post(); ?>
-
-			<article id="post-<?php the_ID(); ?>">
-				<header>
-					<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-					<p>Posted on <?php the_time('F jS, Y'); ?> by <?php the_author(); ?></p>
-				</header>
-				<section>
-					<?php the_content('Read more on "'.the_title('', '', false).'" &raquo;'); ?>
-
-				</section>
-				<footer>
-					<p><?php the_tags('Tags: ', ', ', '<br>'); ?> Posted in <?php the_category(', '); ?> &bull; <?php edit_post_link('Edit', '', ' &bull; '); ?> <?php comments_popup_link('Respond to this post &raquo;', '1 Response &raquo;', '% Responses &raquo;'); ?></p>
-				</footer>
-			</article>
-
-			<?php endwhile; ?>
-
-			<nav>
-				<p><?php posts_nav_link('&nbsp;&bull;&nbsp;'); ?></p>
-			</nav>
-
-			<?php else : ?>
-
-			<article>
-				<h1>Not Found</h1>
-				<p>Sorry, but the requested resource was not found on this site.</p>
-				<?php get_search_form(); ?>
-			</article>
-
-			<?php endif; ?>
-
-		</section>
-
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 
 <?php get_footer(); ?>
