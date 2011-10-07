@@ -36,9 +36,9 @@ function the_breadcrumb() {
       }
     }
     elseif (is_page()) {
-      echo '<li>';
+      echo '<li><a href="#">';
       echo the_title();
-      echo '</li>';
+      echo '</a></li>';
     }
   }
   elseif (is_tag()) {
@@ -79,21 +79,13 @@ function the_breadcrumb() {
  *
  * @since HTMLgraphic
  */
-function load_jquery_script_cdn() {
+function load_better_jquery_script() {
   wp_deregister_script('jquery');
   echo "<script src='//ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js'></script>";
   echo "<script>!window.jQuery && document.write(unescape('%3Cscript src=\"/wp-includes/js/jquery/jquery.js\"%3E%3C/script%3E'))</script>";
 }
 
-/**
- * Cache the BBQ script (Back Button & Query Library) for dealing with hashes in the URL
- *
- * @since HTMLgraphic
- */
-function load_bbq_jquery_script() {
-  wp_register_script('jquery-ba-bbq', get_stylesheet_directory_uri() . '/js/jquery.ba-bbq.min.js');
-  wp_enqueue_script('jquery-ba-bbq');
-}
+add_action('wp_head', 'load_better_jquery_script', 1);
 
 function load_scrollTo_jquery_script() {
   wp_register_script('jquery-scrollTo', get_stylesheet_directory_uri() . '/js/jquery.scrollTo-1.3.3.min.js');

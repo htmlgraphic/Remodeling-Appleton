@@ -37,7 +37,10 @@
 
 		<style type="text/css">
         <?php if (is_home()): // About Us Page ?>
-           html{ background:#0F0B08 url(/images/bg/home.jpg) top center no-repeat;}
+           html{ background:#090502 url(/images/bg/home.jpg) top center no-repeat;}
+        <?php endif; ?>
+		<?php if ((get_page($page_id)->ID == 76) || (get_page($page_id)->ID == 94)): // Interior Design ?>
+           html{ background:#090502 url(/images/bg/interior.jpg) top center no-repeat;}
         <?php endif; ?>
         </style>
         
