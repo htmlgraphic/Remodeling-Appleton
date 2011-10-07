@@ -8,44 +8,121 @@ Template:       H5
 Version:        0.1.0
 */
 
+@import url("styles-html5.css");
 @import url("../H5/style.css");
 
-html { font-size: 100%; height: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html { font-size: 100%; height: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 body { height: 100%; line-height: 1.231; margin: 0 auto; width: 948px; }
 body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+img{ border:0;}
 
 body > header{ padding:10px 25px 10px; margin-top:15px;}
 	body > header div.phone {font:normal 400 .9em futura-pt; float:right; padding:20px 25px 25px;}
 	body > header img{border:none;}
 	body > header a, body > header div a:link, body > header div a:visited{ color:#FFF; font-size:1.4em; font-family:Arial, Helvetica, sans-serif; text-decoration: none;}
-body > nav{ float:left; padding:0; margin-bottom:35px; width: 100%;}
+body > nav{ float:left; padding:0; margin-bottom:0; width: 100%;}
+body.home > nav{ margin-bottom:20px;}
 	body > nav ul{float: left; list-style-type: none; padding:0; width:100%;
 		background: #10ACE9; /* for non-css3 browsers */
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#10ACE9', endColorstr='#0D769D'); /* for IE */
 		background: -webkit-gradient(linear, left top, left bottom, from(#10ACE9), to(#0D769D)); /* for webkit browsers */
 		background: -moz-linear-gradient(top,  #10ACE9,  #0D769D); /* for firefox 3.6+ */ 
 		border-bottom: 1px solid #0A4C65;}
-	body > nav ul li{float:left;}
+	body > nav ul li{ float:left;}
 	#menu-home-menu a{ padding-left: 15px; padding-right: 15px;}
 	body > nav ul li{ display:inline-block; margin:0; border-right:1px #3A90B1 solid;}	
 	body > nav ul li a{ display:inline-block; padding:7px 0; text-align:center; width:140px;}
-	body > nav ul li a:link, body > nav ul li a:visited {border-right:1px #96D3EB solid; color:#FFF; font-family:Arial, Helvetica, sans-serif; font-size:.8em; text-decoration:none; text-transform:uppercase; text-shadow: 0.1em 1px #333; font-weight:normal;}
+	body > nav ul li a:link, body > nav ul li a:visited {border-right:1px #96D3EB solid; color:#FFF; font-family:Arial, Helvetica, sans-serif; text-decoration:none; text-transform:uppercase; text-shadow: 0.1em 1px #333; font-weight:normal;}
 	body > nav ul li a:hover{ background:#10ACE9; text-shadow: 0.1em 1px #666;}
 nav + section { background:#FFF; margin: 0; width: 100%;}
 
+header > h1{ font-size:1.8em; font-weight:normal; padding:10px 0 10px 20px;}
 
-	
+	#crumbs { list-style: none; overflow: hidden; font: 12px Helvetica, Arial, Sans-Serif; margin-bottom:10px;}
+	#crumbs li { float: left;}
+	#crumbs li a {
+			color: white;
+			text-decoration: none; 
+			padding: 8px 0 8px 35px;
+			background: #10ACE9;                   /* fallback color */
+			background: hsla(197, 87%, 42%,1);
+			position: relative; 
+			display: block;
+			float: left;
+	}
+	#crumbs li a:after { 
+			content: " "; 
+			display: block; 
+			width: 0; 
+			height: 0;
+			border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+			border-bottom: 50px solid transparent;
+			border-left: 30px solid hsla(197, 87%, 42%,1);
+			position: absolute;
+			top: 50%;
+			margin-top: -50px; 
+			left: 100%;
+			z-index: 2; 
+	}       
+	#crumbs li a:before { 
+			content: " "; 
+			display: block; 
+			width: 0; 
+			height: 0;
+			border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+			border-bottom: 50px solid transparent;
+			border-left: 30px solid white;
+			position: absolute;
+			top: 50%;
+			margin-top: -50px; 
+			margin-left: 1px;
+			left: 100%;
+			z-index: 1; 
+	}       
+	#crumbs li:first-child a {
+			padding-left: 10px;
+	}
+	#crumbs li:nth-child(2) a       { background:        hsla(197, 87%, 42%,1); }
+	#crumbs li:nth-child(2) a:after { border-left-color: hsla(197, 87%, 42%,1); }
+	#crumbs li:nth-child(3) a       { background:        hsla(197, 87%, 52%,1); }
+	#crumbs li:nth-child(3) a:after { border-left-color: hsla(197, 87%, 52%,1); }
+	#crumbs li:nth-child(4) a       { background:        hsla(197, 87%, 62%,1); }
+	#crumbs li:nth-child(4) a:after { border-left-color: hsla(197, 87%, 62%,1); }
+	#crumbs li:nth-child(5) a       { background:        hsla(197, 87%, 72%,1); }
+	#crumbs li:nth-child(5) a:after { border-left-color: hsla(197, 87%, 72%,1); }
+	#crumbs li:last-child a {
+			background: transparent !important;
+			color: black;
+			pointer-events: none;
+			cursor: default;
+	}
+	#crumbs li:last-child a:after { border: 0; }
+	#crumbs li a:hover { background: hsla(197,87%,47%,1); }
+	#crumbs li a:hover:after { border-left-color: hsla(197,87%,47%,1) !important; }
+
 	section > .about-subpage{ width:500px;}
 
-/* HOME */
+/* INTERIOR */
+	#interior section { margin:0 auto; width:840px;}
+	#interior section > div{ float:left; padding:0 10px 20px 10px; width:260px;}
+	
 
-.home section > div{ float:left; padding:0 10px 0 11px; width:295px;}
-	.home section > div img{ border:0;}
-	.home section > div p{font:normal 400 1em futura-pt; height:165px; line-height:130%; margin:0 0 15px 0; padding:0 5px;}
+	#team section > div{float:left; padding:0 30px 20px 40px;}
+	#team section #overview{ float:left; padding:0; width:460px; }
+		#team section #overview p{ font:normal 400 1.2em futura-pt; padding:10px 0;}
+		
+		#team section div h2{ font:normal 400 1.4em futura-pt; padding:10px; text-transform:uppercase;}
+		#team section ul#galleries{ background:#666; list-style:none; margin:0 auto; text-align:center; width:850px; }
+		#team section ul#galleries li{ display:inline;}
+
+/* HOME */
+	.home section > div{ float:left; padding:0 10px 0 11px; width:295px;}
+	.home section > div p{font:normal 400 1.2em futura-pt; height:165px; line-height:130%; margin:0 0 15px 0; padding:0 5px;}
 	.home section > div ul{ margin:0 5px 10px 5px; padding:0;}
 	.home section > div ul li{font:normal 400 1em futura-pt; list-style:none; margin:0; padding:5px 0;}
 	.home section > div ul li:first-child{border-bottom: #666 dotted;}
-		.home section > div ul li a{ color:#000; text-decoration:none;}
+		.home section > div ul li a{ color:#000; font-size:1.2em; text-decoration:none;}
 		.home section > div ul li a:hover{ text-decoration:underline;}
 
 div.image {
@@ -70,10 +147,35 @@ h3 div {
    width:240px;
 }
 
+footer div#contact { position: relative; width: 340px; /* for IE 6 */}
+footer div#contact div { color:#E4D7C6; position: absolute; margin:10px 0 0 50px; left: 0; top: 0; text-shadow: 1px 1px #632600}
+	footer div#contact div h2{ font-family: "Arial Black"; font-size:1.8em; margin:0; padding:0; text-transform:uppercase; }
+		footer div#contact div strong{ font-size:1.1em; font-weight:normal;}
+	footer div#contact div ul{ font-size:1em; list-style:none; margin:10px 0 12px -5px; padding:0;}
+	footer div#contact div ul li.addr{ background: url("/images/sprite.png") no-repeat scroll 0 2px transparent; font-size:1.1em; padding-left: 36px; text-align:left;}
+	footer div#contact div ul li.phone{ background: url("/images/sprite.png") no-repeat scroll 3px -42px transparent; margin:15px 0 0 0; padding:0 0 0 36px; text-align:left;}
+		footer div#contact div ul li.phone a:visited, footer div#contact div ul li.phone a:link{ color:#E4D7C6; font-size:1.2em; font-family:Arial, Helvetica, sans-serif; text-decoration: none;}
+	
+	footer div#contact div a.submit, a.submit, a.submit:active, a.submit:visited { color:#FFF; text-decoration:none;}
+.submit{ background:#06C903;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#06C903', endColorstr='#00A800'); /* for IE */
+background: -webkit-gradient(linear, left top, left bottom, from(#06C903), to(#00A800)); /* for webkit browsers */
+background: -moz-linear-gradient(top,  #06C903,  #00A800); /* for firefox 3.6+ */ 
+   color:#FFF;
+   cursor:pointer;
+   display: inline-block;
+   font: 14px 'Lucida Grande', Helvetica, Arial, Sans-Serif; font-weight:bold; text-decoration: none; text-transform:uppercase;
+   padding: 10px 15px;
+   text-shadow:-1px -1px 0 #666;
+   -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;}
+a.submit:hover{background:#06C903;}
+
+
+
 #about-us-navigation-menu{width:200px;}
 
-body > footer{ margin:0; padding:20px 0 0 0; font-family: Helvetica, sans-serif;}
-footer > ul{ float:left; font:normal 400 1.2em futura-pt; margin: 0 0 0 10px; padding: 0; width:475px;}
+body > footer{ margin:0 0 20px 0; padding:20px 0 50px 0; font-family: Arial, Helvetica, sans-serif;}
+footer > ul{ float:left; font:normal 400 1.4em futura-pt; margin: 0 0 0 10px; padding: 0; width:475px;}
 	footer > ul li{color:#FFF; font-size:.8em; list-style:none; padding:10px 0; text-align:left; }
 	footer > ul li a, footer > ul li a:link, footer > ul li a:visited{ color:#FFF; padding:0 5px; text-decoration:none; text-shadow: 1px 1px #333}
 		footer > ul li a:hover{ text-decoration:underline;}

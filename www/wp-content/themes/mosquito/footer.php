@@ -7,8 +7,18 @@
                 <li>&copy; <?= date('Y'); ?> <?php bloginfo('name'); ?></li>
             </ul>
             
-            <div>
-            <img src="/images/footer_woodage.png" />
+            <div id="contact">
+              <img src="/images/footer_woodage.png" alt="Contact and address information" />
+              <div>
+                <h2>Mosquito Creek</h2>
+                <strong>Home Renovations & Outdoor Living</strong>
+                <ul>
+                <li class="addr">1120 East Wisconsin Ave<br />
+                    Appleton, WI 54911</li>
+                <li class="phone"><a href="tel:9207308519">920 730-8519</a></li>
+                </ul>
+                <a href="/contact/?ask=question" class="submit">Ask a Question</a>
+              </div>
             </div>
             
 		</footer>
