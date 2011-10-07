@@ -116,9 +116,12 @@ header > h1{ font-size:1.8em; font-weight:normal; padding:10px 0 10px 20px;}
 		#team section ul#galleries{ background:#666; list-style:none; margin:0 auto; text-align:center; width:850px; }
 		#team section ul#galleries li{ display:inline;}
 
+
 /* HOME */
-	.home section > div{ float:left; padding:0 10px 0 11px; width:295px;}
-	.home section > div p{font:normal 400 1.2em futura-pt; height:165px; line-height:130%; margin:0 0 15px 0; padding:0 5px;}
+.home section > div{ float:left; padding:0 10px 0 11px; width:295px;}
+	.home section > div img{ border:0;}
+	.home section > div p{font:normal 400 1em futura-pt; height:185px; line-height:130%; margin:0 0 15px 0; padding:0 5px; text-align: justify;}
+
 	.home section > div ul{ margin:0 5px 10px 5px; padding:0;}
 	.home section > div ul li{font:normal 400 1em futura-pt; list-style:none; margin:0; padding:5px 0;}
 	.home section > div ul li:first-child{border-bottom: #666 dotted;}

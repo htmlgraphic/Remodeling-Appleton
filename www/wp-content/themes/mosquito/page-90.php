@@ -10,6 +10,8 @@
   </article>
 </section>
 
-[flickr-gallery]
+<?php
+
+?>
 
 <?php get_footer(); ?>
