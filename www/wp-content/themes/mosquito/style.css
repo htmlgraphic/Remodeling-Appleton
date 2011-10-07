@@ -21,7 +21,7 @@ body > header{ padding:10px 25px 10px; margin-top:15px;}
 	body > header div.phone {font:normal 400 .9em futura-pt; float:right; padding:20px 25px 25px;}
 	body > header img{border:none;}
 	body > header a, body > header div a:link, body > header div a:visited{ color:#FFF; font-size:1.4em; font-family:Arial, Helvetica, sans-serif; text-decoration: none;}
-body > nav{ float:left; padding:0; margin-bottom:0; width: 100%;}
+body > nav{ float:left; padding:0; margin-bottom:20px; width: 100%;}
 body.home > nav{ margin-bottom:20px;}
 	body > nav ul{float: left; list-style-type: none; padding:0; width:100%;
 		background: #10ACE9; /* for non-css3 browsers */
@@ -110,7 +110,7 @@ header > h1{ font-size:1.8em; font-weight:normal; padding:10px 0 10px 20px;}
 
 	#team section > div{float:left; padding:0 30px 20px 40px;}
 	#team section #overview{ float:left; padding:0; width:460px; }
-		#team section #overview p{ font:normal 400 1.2em futura-pt; padding:10px 0;}
+		#team section #overview p{ font:normal 400 1.3em futura-pt; padding:10px 0;}
 		
 		#team section div h2{ font:normal 400 1.4em futura-pt; padding:10px; text-transform:uppercase;}
 		#team section ul#galleries{ background:#666; list-style:none; margin:0 auto; text-align:center; width:850px; }

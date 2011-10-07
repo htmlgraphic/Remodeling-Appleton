@@ -5,7 +5,7 @@
     <header>
       <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
       <?php /* ?><p>Posted on <?php the_time('F jS, Y'); ?> by <?php the_author(); ?></p><?php */ ?>
-      <?php the_breadcrumb(); ?>                    
+      <?php hg_bread_crumbs(); ?>              
     </header>
     <section>
       <div id="about-us-navigation-menu" style="float:left;">
