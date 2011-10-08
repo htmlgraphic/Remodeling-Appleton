@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 
-<section>
+<section id="about">
   <article id="post-<?php the_ID(); ?>">
     <header>
-      <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+      <h1><?php the_title(); ?></h1>
       <?php /* ?><p>Posted on <?php the_time('F jS, Y'); ?> by <?php the_author(); ?></p><?php */ ?>
       <?php hg_bread_crumbs(); ?>              
     </header>
     <section>
-      <div id="about-us-navigation-menu" style="float:left;">
+      <div id="about-us-navigation-menu">
         <ul>
           <li><a href="#history" rel="history">History</a></li>
           <li><a href="#awards" rel="awards">Awards</a></li>
@@ -35,7 +35,7 @@
         <?php
         $page_data = get_page($about_page_id);
         ?>
-        <div id="about-subpage-<?php echo $about_page_name; ?>" class="about-subpage" style="display:none;float:left;">
+        <div id="about-subpage-<?php echo $about_page_name; ?>" class="about-subpage">
           <?php
           $content = apply_filters('the_content', $page_data->post_content);
           $title = $page_data->post_title;

@@ -16,6 +16,7 @@ body { height: 100%; line-height: 1.231; margin: 0 auto; width: 948px; }
 body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
 img{ border:0;}
+a{outline: 0;}
 
 body > header{ padding:10px 25px 10px; margin-top:15px;}
 	body > header div.phone {font:normal 400 .9em futura-pt; float:right; padding:20px 25px 25px;}
@@ -32,7 +33,7 @@ body.home > nav{ margin-bottom:20px;}
 	body > nav ul li{ float:left;}
 	#menu-home-menu a{ padding-left: 15px; padding-right: 15px;}
 	body > nav ul li{ display:inline-block; margin:0; border-right:1px #3A90B1 solid;}	
-	body > nav ul li a{ display:inline-block; padding:7px 0; text-align:center; width:140px;}
+	body > nav ul li a{ display:inline-block; padding:7px 20px; text-align:center;}
 	body > nav ul li a:link, body > nav ul li a:visited {border-right:1px #96D3EB solid; color:#FFF; font-family:Arial, Helvetica, sans-serif; text-decoration:none; text-transform:uppercase; text-shadow: 0.1em 1px #333; font-weight:normal;}
 	body > nav ul li a:hover{ background:#10ACE9; text-shadow: 0.1em 1px #666;}
 nav + section { background:#FFF; margin: 0; width: 100%;}
@@ -101,8 +102,6 @@ header > h1{ font-size:1.8em; font-weight:normal; padding:10px 0 10px 20px;}
 	#crumbs li a:hover { background: hsla(197,87%,47%,1); }
 	#crumbs li a:hover:after { border-left-color: hsla(197,87%,47%,1) !important; }
 
-	section > .about-subpage{ width:500px;}
-
 /* INTERIOR */
 	#interior section { margin:0 auto; width:840px;}
 	#interior section > div{ float:left; padding:0 10px 20px 10px; width:260px;}
@@ -116,17 +115,33 @@ header > h1{ font-size:1.8em; font-weight:normal; padding:10px 0 10px 20px;}
 		#team section ul#galleries{ background:#666; list-style:none; margin:0 auto; text-align:center; width:850px; }
 		#team section ul#galleries li{ display:inline;}
 
+	#gallery section { margin-top:20px;}
+	#gallery div{ margin:0 auto; width:960px;}
+	#gallery ul#galleries li{ display: inline-block; list-style:none; margin:0; padding:10px 0 11px 0; background: url(/images/gallery_bg.png) bottom no-repeat;}
 
 /* HOME */
 .home section > div{ float:left; padding:0 10px 0 11px; width:295px;}
 	.home section > div img{ border:0;}
-	.home section > div p{font:normal 400 1em futura-pt; height:185px; line-height:130%; margin:0 0 15px 0; padding:0 5px; text-align: justify;}
+	.home section > div p{font:normal 400 1.2em/140% futura-pt; height:185px; margin:0 0 15px 0; padding:0 5px; text-align: justify;}
 
 	.home section > div ul{ margin:0 5px 10px 5px; padding:0;}
 	.home section > div ul li{font:normal 400 1em futura-pt; list-style:none; margin:0; padding:5px 0;}
 	.home section > div ul li:first-child{border-bottom: #666 dotted;}
 		.home section > div ul li a{ color:#000; font-size:1.2em; text-decoration:none;}
 		.home section > div ul li a:hover{ text-decoration:underline;}
+
+	#about-us-navigation-menu{ float:left; padding-left:20px;}
+	#about-us-navigation-menu ul { list-style:none; margin:0;}
+	#about-us-navigation-menu li{ background: #CCC; border-bottom: 1px #FFF solid; color:#666; text-align:center; width:200px;}
+		#about-us-navigation-menu li a{ color:#666; display:block; padding:10px 0; text-decoration:none;}
+		#about-us-navigation-menu li:first-child{ background:#efefef; color: #333;} /* initial page load */
+		#about-us-navigation-menu li a.sel{ background:#efefef; color: #333;}
+			section > .about-subpage{float:left; display:none; margin-left:20px; width:650px;}
+			section > .about-subpage p, section > .about-subpage li{ list-style:none; font:normal 400 1.3em futura-pt; padding:5px 0;}
+			#about #about-subpage-history{display:block;}
+			
+	
+
 
 div.image {
    position: relative;

@@ -27,8 +27,15 @@
 		<script>
           $(function() {
             $('#about-us-navigation-menu ul li a').click(function(event) {
+			  $("#about-us-navigation-menu ul li a").each(function(){
+				  $(this).removeClass("sel");
+			  });
+	  
+			  $(this).addClass("sel");
+			  
               event.preventDefault();
               $('.about-subpage').hide();
+			  
               $('#about-subpage-' + $(this).attr('rel')).show();
             });
           });
@@ -41,6 +48,9 @@
         <?php endif; ?>
 		<?php if ((get_page($page_id)->ID == 76) || (get_page($page_id)->ID == 94)): // Interior Design ?>
            html{ background:#090502 url(/images/bg/interior.jpg) top center no-repeat;}
+        <?php endif; ?>
+		<?php if (get_page($page_id)->ID == 16): // Interior Design ?>
+           html{ background:#090502 url(/images/bg/gallery.jpg) top center no-repeat;}
         <?php endif; ?>
         </style>
         
