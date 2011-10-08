@@ -19,7 +19,7 @@ img{ border:0;}
 a{outline: 0;}
 
 body > header{ padding:10px 25px 10px; margin-top:15px;}
-	body > header div.phone {font:normal 400 .9em futura-pt; float:right; padding:20px 25px 25px;}
+	body > header div.phone {font:normal 400 1.4em futura-pt; float:right; padding:20px 25px 25px;}
 	body > header img{border:none;}
 	body > header a, body > header div a:link, body > header div a:visited{ color:#FFF; font-size:1.4em; font-family:Arial, Helvetica, sans-serif; text-decoration: none;}
 body > nav{ float:left; padding:0; margin-bottom:20px; width: 100%;}
@@ -31,9 +31,8 @@ body.home > nav{ margin-bottom:20px;}
 		background: -moz-linear-gradient(top,  #10ACE9,  #0D769D); /* for firefox 3.6+ */ 
 		border-bottom: 1px solid #0A4C65;}
 	body > nav ul li{ float:left;}
-	#menu-home-menu a{ padding-left: 15px; padding-right: 15px;}
 	body > nav ul li{ display:inline-block; margin:0; border-right:1px #3A90B1 solid;}	
-	body > nav ul li a{ display:inline-block; padding:7px 20px; text-align:center;}
+	body > nav ul li a{ display:inline-block; padding:10px 22px; text-align:center;}
 	body > nav ul li a:link, body > nav ul li a:visited {border-right:1px #96D3EB solid; color:#FFF; font-family:Arial, Helvetica, sans-serif; text-decoration:none; text-transform:uppercase; text-shadow: 0.1em 1px #333; font-weight:normal;}
 	body > nav ul li a:hover{ background:#10ACE9; text-shadow: 0.1em 1px #666;}
 nav + section { background:#FFF; margin: 0; width: 100%;}
@@ -117,7 +116,7 @@ header > h1{ font-size:1.8em; font-weight:normal; padding:10px 0 10px 20px;}
 
 	#gallery section { margin-top:20px;}
 	#gallery div{ margin:0 auto; width:960px;}
-	#gallery ul#galleries li{ display: inline-block; list-style:none; margin:0; padding:10px 0 11px 0; background: url(/images/gallery_bg.png) bottom no-repeat;}
+	#gallery ul#galleries li{ display: inline-block; list-style:none; margin:0; padding:10px 0; background: url(/images/gallery_bg.png) bottom no-repeat;}
 
 /* HOME */
 .home section > div{ float:left; padding:0 10px 0 11px; width:295px;}
@@ -134,12 +133,11 @@ header > h1{ font-size:1.8em; font-weight:normal; padding:10px 0 10px 20px;}
 	#about-us-navigation-menu ul { list-style:none; margin:0;}
 	#about-us-navigation-menu li{ background: #CCC; border-bottom: 1px #FFF solid; color:#666; text-align:center; width:200px;}
 		#about-us-navigation-menu li a{ color:#666; display:block; padding:10px 0; text-decoration:none;}
-		#about-us-navigation-menu li:first-child{ background:#efefef; color: #333;} /* initial page load */
 		#about-us-navigation-menu li a.sel{ background:#efefef; color: #333;}
 			section > .about-subpage{float:left; display:none; margin-left:20px; width:650px;}
 			section > .about-subpage p, section > .about-subpage li{ list-style:none; font:normal 400 1.3em futura-pt; padding:5px 0;}
 			#about #about-subpage-history{display:block;}
-			
+		.about-subpage ul{ margin-left: 0;}
 	
 
 
