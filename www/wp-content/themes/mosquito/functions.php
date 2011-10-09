@@ -62,13 +62,21 @@ function load_serialScroll_jquery_script() {
   wp_enqueue_script('jquery-serialScroll');
 }
 
+function remove_useless_scripts() { // slideshow gallery lightbox is disabled via admin
+	wp_deregister_script('jquery-flightbox');
+	wp_deregister_script('jquery-flightbox-css');
+	wp_deregister_script('flickr-gallery');
+}
+
 //
 // action bindings
 //
 add_action('init', 'register_my_menus');
 add_action('wp_head', 'load_better_jquery_script', 1);
 add_action('wp_enqueue_scripts', 'load_bbq_jquery_script');
-add_action('wp_enqueue_scripts', 'load_scrollTo_jquery_script');
-add_action('wp_enqueue_scripts', 'load_localscroll_jquery_script');
-add_action('wp_enqueue_scripts', 'load_serialScroll_jquery_script');
+//add_action('wp_enqueue_scripts', 'load_scrollTo_jquery_script');
+//add_action('wp_enqueue_scripts', 'load_localscroll_jquery_script');
+//add_action('wp_enqueue_scripts', 'load_serialScroll_jquery_script');
+add_action('wp_enqueue_scripts', 'remove_useless_scripts');
+
 ?>

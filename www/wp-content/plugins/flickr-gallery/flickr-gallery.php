@@ -92,14 +92,14 @@ class DC_FlickrGallery {
 				$phpFlickr->enableCache('custom', array(array('DC_FlickrGallery', 'cache_get'), array('DC_FlickrGallery', 'cache_set')));
 			}
 			wp_enqueue_script('jquery-ui-tabs');			
-			wp_enqueue_script('jquery-flightbox', DC_FlickrGallery::getURL() . 'flightbox/jquery.flightbox.js', array(), CM_FLICKR_GALLERY_VERSION);			
-			wp_enqueue_style('flickr-gallery', DC_FlickrGallery::getURL() . 'flickr-gallery.css', array(), CM_FLICKR_GALLERY_VERSION, 'all');			
+//			wp_enqueue_script('jquery-flightbox', DC_FlickrGallery::getURL() . 'flightbox/jquery.flightbox.js', array(), CM_FLICKR_GALLERY_VERSION);			
+//			wp_enqueue_style('flickr-gallery', DC_FlickrGallery::getURL() . 'flickr-gallery.css', array(), CM_FLICKR_GALLERY_VERSION, 'all');		
 			if ( DC_FlickrGallery::get_major_version() >= 2.8 ) {
 				wp_enqueue_style('fg-jquery-ui', DC_FlickrGallery::getURL() . 'tab-theme/jquery-ui-1.7.3.css', array(), '1.7.3', 'all');			
 			} else {
 				wp_enqueue_style('fg-jquery-ui', DC_FlickrGallery::getURL() . 'tab-theme/jquery-ui-1.5.2.css', array(), '1.5.2', 'all');
 			}
-			wp_enqueue_style('jquery-flightbox', DC_FlickrGallery::getURL() . 'flightbox/jquery.flightbox.css', array(), CM_FLICKR_GALLERY_VERSION, 'all');			
+//			wp_enqueue_style('jquery-flightbox', DC_FlickrGallery::getURL() . 'flightbox/jquery.flightbox.css', array(), CM_FLICKR_GALLERY_VERSION, 'all');		
 		}
 		
 		if ( $_GET['action'] == 'flickr-gallery-photoset' ) {
@@ -115,6 +115,10 @@ class DC_FlickrGallery {
 		}
 		
 		if ( !is_admin() && (get_option('fg-flightbox') === false || get_option('fg-flightbox')) ) {
+			wp_enqueue_script('jquery-flightbox', DC_FlickrGallery::getURL() . 'flightbox/jquery.flightbox.js', array(), CM_FLICKR_GALLERY_VERSION);	
+			wp_enqueue_style('flickr-gallery', DC_FlickrGallery::getURL() . 'flickr-gallery.css', array(), CM_FLICKR_GALLERY_VERSION, 'all');
+			wp_enqueue_style('jquery-flightbox', DC_FlickrGallery::getURL() . 'flightbox/jquery.flightbox.css', array(), CM_FLICKR_GALLERY_VERSION, 'all');
+
 			add_action('wp_head', array('DC_FlickrGallery', 'header'));
 			add_action('wp_footer', array('DC_FlickrGallery', 'footer'));
 		}
