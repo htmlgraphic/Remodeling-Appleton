@@ -26,17 +26,27 @@
         <?php if (get_page($page_id)->ID == 14): // About Us Page ?>
 		<script>
           $(function() {
-            $('#about-us-navigation-menu ul li a').click(function(event) {
+			var elem = location.hash.replace('#','');
+			
+			if (elem) {
+				$('#about-subpage-' + (elem)).show();
+				$('a[rel="'+elem+'"]').addClass("sel");
+			} else {
+				// Default to the history page if nothing selected.
+				$('#about-subpage-history').show();
+				$('a[rel="history"]').addClass("sel");
+			}
+			
+			$('a[rel]').click(function(event) {
+			  var elem = $(this).attr('rel');
 			  $("#about-us-navigation-menu ul li a").each(function(){
-				  $(this).removeClass("sel");
+					$('ul li a[rel!="'+elem+'"]').removeClass("sel");	 
 			  });
-	  
-			  $(this).addClass("sel");
-			  
-              event.preventDefault();
-              $('.about-subpage').hide();
-			  
-              $('#about-subpage-' + $(this).attr('rel')).show();
+	 
+	  			  $('ul li a[rel="'+elem+'"]').addClass("sel");			  
+    	          $('.about-subpage').hide();
+	       	      $('#about-subpage-' + $(this).attr('rel')).show();
+				  event.preventDefault();
             });
           });
         </script>

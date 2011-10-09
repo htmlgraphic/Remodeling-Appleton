@@ -10,7 +10,7 @@
     <section>
       <div id="about-us-navigation-menu">
         <ul>
-          <li><a href="#history" rel="history" class="sel">History</a></li>
+          <li><a href="#history" rel="history">History</a></li>
           <li><a href="#contact" rel="contact">Contact</a></li>
           <li><a href="#awards" rel="awards">Awards</a></li>
           <li><a href="#accreditation" rel="accreditation">Accreditation</a></li>
@@ -25,7 +25,7 @@
           22 => 'accreditation',
           24 => 'certificates',
           28 => 'testimonials',
-          30 => 'contact'
+          5 => 'contact'
       );
       ?>
 
