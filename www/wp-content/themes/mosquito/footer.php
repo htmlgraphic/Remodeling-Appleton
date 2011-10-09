@@ -17,7 +17,7 @@
                     Appleton, WI 54911</li>
                 <li class="phone"><a href="tel:9207308519">920 730-8519</a></li>
                 </ul>
-                <a href="/contact/?ask=question" class="submit">Ask a Question</a>
+                <a href="/about/?ask=question" class="submit">Ask a Question</a>
               </div>
             </div>
             
