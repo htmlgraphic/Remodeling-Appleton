@@ -17,6 +17,8 @@ body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
 img{ border:0;}
 a{outline: 0;}
+.transparent {zoom: 1; filter: alpha(opacity=75); opacity: 0.75;}
+.transparent-lite{zoom: 1; filter: alpha(opacity=90); opacity: 0.90;}
 
 body > header{ padding:10px 25px 10px; margin-top:15px;}
 	body > header div.phone {font:normal 400 1.4em futura-pt; float:right; padding:20px 25px 25px;}
@@ -83,14 +85,14 @@ header > h1{ font-size:1.8em; font-weight:normal; padding:10px 0 10px 20px;}
 	#crumbs li:first-child a {
 			padding-left: 10px;
 	}
-	#crumbs li:nth-child(2) a       { background:        hsla(197, 87%, 42%,1); }
-	#crumbs li:nth-child(2) a:after { border-left-color: hsla(197, 87%, 42%,1); }
-	#crumbs li:nth-child(3) a       { background:        hsla(197, 87%, 52%,1); }
-	#crumbs li:nth-child(3) a:after { border-left-color: hsla(197, 87%, 52%,1); }
-	#crumbs li:nth-child(4) a       { background:        hsla(197, 87%, 62%,1); }
-	#crumbs li:nth-child(4) a:after { border-left-color: hsla(197, 87%, 62%,1); }
-	#crumbs li:nth-child(5) a       { background:        hsla(197, 87%, 72%,1); }
-	#crumbs li:nth-child(5) a:after { border-left-color: hsla(197, 87%, 72%,1); }
+	#crumbs li:nth-child(2) a       { background:        hsla(197,87%,45%,1); }
+	#crumbs li:nth-child(2) a:after { border-left-color: hsla(197,87%,45%,1); }
+	#crumbs li:nth-child(3) a       { background:        hsla(197,87%,55%,1); }
+	#crumbs li:nth-child(3) a:after { border-left-color: hsla(197,87%,55%,1); }
+	#crumbs li:nth-child(4) a       { background:        hsla(197,87%,65%,1); }
+	#crumbs li:nth-child(4) a:after { border-left-color: hsla(197,87%,65%,1); }
+	#crumbs li:nth-child(5) a       { background:        hsla(197,87%,75%,1); }
+	#crumbs li:nth-child(5) a:after { border-left-color: hsla(197,87%,75%,1); }
 	#crumbs li:last-child a {
 			background: transparent !important;
 			color: black;
@@ -106,27 +108,48 @@ header > h1{ font-size:1.8em; font-weight:normal; padding:10px 0 10px 20px;}
 	#interior section > div{ float:left; padding:0 10px 20px 10px; width:260px;}
 	
 
-	#team section > div{float:left; padding:0 30px 20px 40px;}
+	#team section #tease{float:left; padding:0 30px 20px 40px;}
 	#team section #overview{ float:left; padding:0; width:460px; }
 		#team section #overview p{ font:normal 400 1.3em futura-pt; padding:10px 0;}
-		
-		#team section div h2{ font:normal 400 1.4em futura-pt; padding:10px; text-transform:uppercase;}
 		#team section ul#galleries{ background:#666; list-style:none; margin:0 auto; text-align:center; width:850px; }
 		#team section ul#galleries li{ display:inline;}
 
-	#gallery section { margin-top:20px;}
-	#gallery div{ margin:0 auto; width:960px;}
+
+	#gallery div{ margin:0 auto; width:940px;}
 	#gallery ul#galleries li{ display: inline-block; list-style:none; margin:0; padding:10px 0; background: url(/images/gallery_bg.png) bottom no-repeat;}
 
 
+/* RENOVATIONS */
+#renovations div{ float:left; margin:0 62px 30px 62px; width:350px; }
+	#renovations div h3{ background: #000; color:#FFF; font: normal 24px/42px omnes-pro, Helvetica, Sans-Serif; padding-left:20px; text-transform:uppercase;}
+	#renovations .interior{ background: url(/images/bg/interior_sm.jpg) no-repeat;}
+	#renovations .exterior{ background: url(/images/bg/exterior_sm.jpg) no-repeat;}
+	#renovations div ul{ list-style:none; margin:40px 0 70px 0;}
+	#renovations div ul li{ width:250px;}
+	#renovations div ul li{ background: #CCC; border-bottom: 1px #FFF solid; margin:0 auto;}
+	#renovations div ul li:last-child{ border-bottom:none;}
+	#renovations div ul li a{ background:url(/images/sprite.png) no-repeat 220px -62px; color: #333; font-size:1.2em; text-decoration:none; display:block; padding:10px 0 10px 10px; }
+		#renovations div ul li a:hover{ background:#efefef url(/images/sprite.png) no-repeat 220px -62px;}
+	
+
+
+
 /* KITCHEN RENOVATIONS */
-#kitchen-renovations #slider{float: left; width:100%;}
+#slider{ float: left; width:100%;}
+#slider h2{ font:normal 400 1.4em futura-pt; margin-left:85px; text-transform:uppercase;}
 #kitchen-renovations section #overview{float:left; padding:0 30px 20px 40px; width: 300px;}
 	#kitchen-renovations section .slideshow{ float:left; padding:0; margin-top:20px; width:500px; }
 	#kitchen-renovations section > div p{ font:normal 400 1.2em/140% futura-pt; margin:50px 0 15px 0; padding:0 5px; text-align: justify;}
-	#kitchen-renovations section{margin-bottom:10px;}
+	section#kitchen-renovations {padding-bottom:10px;}
 
-#slider{ margin-top:10px; height:140px;}
+#general section #overview{float:left; padding:0 30px 20px 40px; width: 300px;}
+	#general section .slideshow{ float:left; padding:0; margin-top:20px; width:500px; }
+	#general section > div p{ font:normal 400 1.2em/140% futura-pt; margin:50px 0 15px 0; padding:0 5px; text-align: justify;}
+	section#general{padding-bottom:20px;}
+
+
+/* SCROLLING SLIDER */
+#slider{ margin-top:30px; height:160px;}
 .infiniteCarousel{position: relative; margin: 0 auto; width: 880px;}
 
 .infiniteCarousel .wrapper {
@@ -227,34 +250,25 @@ header > h1{ font-size:1.8em; font-weight:normal; padding:10px 0 10px 20px;}
 	#about-us-navigation-menu li{ background: #CCC; border-bottom: 1px #FFF solid; color:#666; text-align:center; width:200px;}
 		#about-us-navigation-menu li a{ color:#666; display:block; padding:10px 0; text-decoration:none;}
 		#about-us-navigation-menu li a.sel{ background:#efefef; color: #333;}
-			section > .about-subpage{float:left; display:none; margin-left:20px; width:650px;}
+			section > .about-subpage{float:left; display:none; min-height:360px; margin-left:20px; width:650px;}
 			section > .about-subpage p, section > .about-subpage li{ list-style:none; font:normal 400 1.3em futura-pt; padding:5px 0;}
 			#about #about-subpage-history{display:block;}
 		.about-subpage ul{ margin-left: 0;}
+		.about-subpage ul.indent{ padding-left:30px;}
 	
 
 
-div.image {
-   position: relative;
-   width: 100%; /* for IE 6 */
-}
+div.image {position: relative; width: 100%; /* for IE 6 */}
 
-h3 {
-   position: absolute;
-   top: 170px;
-   left: 0;
-   width: 100%;
-}
-h3 div {
-   color: #333;
+div.image h3 {position: absolute; top: 170px; left: 0; width: 100%;}
+div.image h3 div {color: #333;
    font: italic 24px/42px omnes-pro, Helvetica, Sans-Serif;
    letter-spacing: -1px;
    background: rgb(255, 255, 255); /* fallback color */
    background: rgba(255, 255, 255, 0.7);
    padding: 5px 0 5px 10px;
    text-transform:uppercase;
-   width:240px;
-}
+   width:240px;}
 
 footer div#contact { position: relative; width: 340px; /* for IE 6 */}
 footer div#contact div { color:#E4D7C6; position: absolute; margin:10px 0 0 50px; left: 0; top: 0; text-shadow: 1px 1px #632600}
@@ -265,6 +279,7 @@ footer div#contact div { color:#E4D7C6; position: absolute; margin:10px 0 0 50px
 	footer div#contact div ul li.phone{ background: url("/images/sprite.png") no-repeat scroll 3px -42px transparent; margin:15px 0 0 0; padding:0 0 0 36px; text-align:left;}
 		footer div#contact div ul li.phone a:visited, footer div#contact div ul li.phone a:link{ color:#E4D7C6; font-size:1.2em; font-family:Arial, Helvetica, sans-serif; text-decoration: none;}
 	
+footer div#contact a.submit{ margin-left:5px;}
 	footer div#contact div a.submit, a.submit, a.submit:active, a.submit:visited { color:#FFF; text-decoration:none;}
 .submit{ background:#06C903;
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#06C903', endColorstr='#00A800'); /* for IE */

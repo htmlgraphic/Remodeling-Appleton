@@ -29,6 +29,7 @@
     ?>
     
         <div id="slider" class="flickr-gallery">
+        <h2>Kitchen Renovation Gallery</h2>
           <div class="infiniteCarousel">
               <div class="wrapper">
                   <ul>

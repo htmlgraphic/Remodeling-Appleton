@@ -1,23 +1,22 @@
 <?php get_header(); ?>
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-		<section id="team">
-			<article id="post-<?php the_ID(); ?>">
-              <header>
-                <h1><?php the_title(); ?></h1>
-                <?php hg_bread_crumbs(); ?>                    
-              </header>
-				<section>
-                
-                <div id="tease">
-                <img src="http://placehold.it/360x460" />
-                </div>
-                
-                <div id="overview">
-				<?php the_content('Read more on "'.the_title('', '', false).'" &raquo;'); ?>    
-                </div>
-
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    
+    <section id="kitchen-renovations">
+      <article id="post-<?php the_ID(); ?>">
+        <header>
+          <h1><?php the_title(); ?></h1>
+          <?php /* ?><p>Posted on <?php the_time('F jS, Y'); ?> by <?php the_author(); ?></p><?php */ ?>
+          <?php hg_bread_crumbs(); ?>  
+        </header>
+      <section>
+    
+    <div id="overview">
+        <?php the_content('Read more on "'.the_title('', '', false).'" &raquo;'); ?> 
+    </div>
+    
+    <div class="slideshow"><img src="http://placehold.it/500x300" /></div>
+    
     <?php
     $flickr_photoset_id = '72157626966312775';
     $flickr_api_key = '2d589541fd6f617409903e97d0e10bbe';
@@ -30,7 +29,7 @@
     ?>
 
         <div id="slider" class="flickr-gallery">
-        <h2>Interior Design Gallery</h2>
+        <h2>Bathroom Renovation Gallery</h2>
           <div class="infiniteCarousel">
               <div class="wrapper">
                   <ul>
@@ -42,13 +41,10 @@
           </div>          
         </div>
 
-				</section>
+        </section>
+        </article>
+    </section>
 
-			</article>
-		</section>
-        
-	<?php endwhile; endif; ?>
-
-<?php //get_sidebar(); ?>
+<?php endwhile; endif; ?>
 
 <?php get_footer(); ?>

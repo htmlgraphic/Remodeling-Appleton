@@ -42,7 +42,7 @@
         </script>
         <?php endif; ?>
         
-        <?php if (get_page($page_id)->ID == 90): // Kitchen Renovation Page ?>
+		<?php if ((get_page($page_id)->ID == 90) || (get_page($page_id)->ID == 94) || (get_page($page_id)->ID == 87)): // Kitchen Renovation Page & Interior Design ?>
         <script src="<?php bloginfo('stylesheet_directory'); ?>/js/facebox.js"></script>
         <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/facebox.css" />
         <script>
@@ -155,12 +155,18 @@ $(document).ready(function () {
 		<style type="text/css">
         <?php if (is_home()): // About Us Page ?>
            html{ background:#090502 url(/images/bg/home.jpg) top center no-repeat;}
-        <?php endif; ?>
-		<?php if ((get_page($page_id)->ID == 76) || (get_page($page_id)->ID == 94)): // Interior Design ?>
+        <?php elseif ((get_page($page_id)->ID == 76) || (get_page($page_id)->ID == 94)): // Interior Design ?>
            html{ background:#090502 url(/images/bg/interior.jpg) top center no-repeat;}
-        <?php endif; ?>
-		<?php if (get_page($page_id)->ID == 90): // Kitchen Renovations ?>
+        <?php elseif (get_page($page_id)->ID == 90): // Kitchen Renovations ?>
            html{ background:#090502 url(/images/bg/kitchen.jpg) top center no-repeat;}
+        <?php elseif (get_page($page_id)->ID == 87): // Bathroom Renovations ?>
+           html{ background:#090502 url(/images/bg/bathroom.jpg) top center no-repeat;}
+        <?php elseif (get_page($page_id)->ID == 14): // About ?>
+           html{ background:#090502 url(/images/bg/about.jpg) top center no-repeat;}
+        <?php elseif (get_page($page_id)->ID == 68): // Renovations Index ?>
+           html{ background:#090502 url(/images/bg/renovations.jpg) top center no-repeat;}
+        <?php else : // Renovations Index ?>
+           html{ background:#090502;}
         <?php endif; ?>
         </style>
         
