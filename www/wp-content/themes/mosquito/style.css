@@ -104,8 +104,8 @@ header > h1{ font-size:1.8em; font-weight:normal; padding:10px 0 10px 20px;}
 	#crumbs li a:hover:after { border-left-color: hsla(197,87%,47%,1) !important; }
 
 /* INTERIOR */
-	#interior section { margin:0 auto; width:840px;}
-	#interior section > div{ float:left; padding:0 10px 20px 10px; width:260px;}
+	#interior section { margin:0 auto; width:926px;}
+	#interior section > div{ float:left; padding:0 10px 20px 10px; width:288px;}
 	
 
 	#team section #tease{float:left; padding:0 30px 20px 40px;}

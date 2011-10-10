@@ -13,17 +13,17 @@
 				<?php the_content('Read more on "'.the_title('', '', false).'" &raquo;'); ?>    
                 
                   <div>
-                  <div class="image"><a href="/interior/kitchen"><img src="http://placehold.it/260x260" />
+                  <div class="image"><a href="/interior/kitchen"><img src="/images/bg/kitchen_sm.jpg" />
                   <h3><div>Kitchen</div></h3></a></div>
                   </div>
                     
                   <div>
-                  <div class="image"><a href="/interior/bath"><img src="http://placehold.it/260x260" />
+                  <div class="image"><a href="/interior/bath"><img src="/images/bg/bathroom_sm.jpg" />
                   <h3><div>Bath</div></h3></a></div>
                   </div>
                   
                   <div>
-                  <div class="image"><a href="/interior/team"><img src="http://placehold.it/260x260" />
+                  <div class="image"><a href="/interior/team"><img src="/images/bg/design_team_sm.jpg" />
                   <h3><div>Our Design Team</div></h3></a></div>
                   </div>
                

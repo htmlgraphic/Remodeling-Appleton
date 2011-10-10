@@ -15,7 +15,7 @@
         <?php the_content('Read more on "'.the_title('', '', false).'" &raquo;'); ?> 
     </div>
     
-    <div class="slideshow"><img src="http://placehold.it/500x300" /></div>
+    <div class="slideshow"><img src="/images/slide/01_kitchen.jpg" /></div>
     
     <?php
     $flickr_photoset_id = '72157626951352847';
